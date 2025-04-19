@@ -10,6 +10,7 @@ export default function Home() {
          .then(response => setTask(response.data))
          .catch(error => console.log(error));
     }, []);
+    console.log(task)
 
     return (
         <div>
@@ -23,6 +24,16 @@ export default function Home() {
                 <th>status</th>
                 </tr>
                 </thead>
+                <tbody>
+                    {task.map((task,index)=>(
+                        <tr key={index}>
+                            <td>{index}</td>
+                            <td>{task.title}</td>
+                            <td>{task.description}</td>
+                            <td>{task.completed ? 'Completed' : 'Not completed'}</td> 
+                        </tr>
+                    ))}
+                </tbody>
             </table>
         </div>
     );
