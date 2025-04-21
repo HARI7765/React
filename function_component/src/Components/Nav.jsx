@@ -19,6 +19,9 @@ export default function Nav() {
         <li className="nav-item">
           <a className="nav-link" href="contact">Contact</a>
         </li>
+        <li className="nav-item">
+          <a className="nav-link" href="Add">Add</a>
+        </li>
       </ul>
       <form className="d-flex">
         <input className="form-control me-2" type="text" placeholder="Search"/>
